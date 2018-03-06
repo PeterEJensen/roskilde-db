@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Opret</title>
+    <link rel="stylesheet" type="text/css" th:href="@{Styles.css}"/>
+    <link th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" rel="stylesheet" media="screen"/>
+</head>
+<body>
+<div class="container">
+    <h1>Opret nyt barn på ventelisten</h1>
+    <form method="Post" th:action="@{/create}">
+        <!-- <p>Enter student id</p>
+         <input   type="number" name="ID" th:field="${student.studentID}"  />-->
+        <p>Fornavn</p>
+        <input type="text" th:field="${student.firstName}"/>
+        <p>Efternavn</p>
+        <input type="text" th:field="${student.lastName}"/>
+        <p>Dato for tilføjelse</p>
+        <input type="date" th:field="${student.enrollmentDate}"/>
+        <p>CPR</p>
+        <input type="text" th:field="${student.cpr}"/>
+
+        <input class="btn btn-primary" type="submit" value="Opret"/>
+    </form>
+</div>
+<script th:src="@{/webjars/jquery/3.1.1/jquery.min.js}"></script>
+</body>
+</html>

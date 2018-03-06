@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Index</title>
+    <!--
+        <link rel="stylesheet" type="text/css" th:href="@{Styles.css}"/>
+    -->
+    <link th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" rel="stylesheet" media="screen"/>
+</head>
+<body>
+
+<div th:replace="fragments/header :: header"/>
+
+<div class="container">
+    <h3>Børn på venteliste</h3>
+
+    <div></div>
+    <table class="table table-striped table-bordered table-hover">
+        <thead>
+        <tr>
+            <th>Plads</th>
+            <th>Fornavn</th>
+            <th>Efternavn</th>
+            <th>Dato for tilføjelse</th>
+            <th>CPR</th>
+            <th>Rediger</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="student: ${students}">
+            <td th:text="${student.studentId}"/>
+            <td th:text="${student.firstName}"/>
+            <td th:text="${student.lastName}"/>
+            <td th:text="${student.enrollmentDate}"/>
+            <td th:text="${student.cpr}"/>
+            <td>
+                <a class="glyphicon glyphicon-cog" th:href="${'details/' + student.studentId}">
+                    <!--<button class="btn btn-info glyphicon glyphicon-cog">details</button>-->
+                </a>
+                <a class="glyphicon glyphicon-pencil" th:href="${'edit/' + student.studentId}">
+                    <!--<button class="btn btn-warning glyphicon glyphicon-pencil">edit</button>-->
+                </a>
+                <a class="glyphicon glyphicon-remove" th:href="${'delete/' + student.studentId}">
+                    <!--<button class="btn btn-danger glyphicon glyphicon-remove">delete</button>-->
+                </a>
+            </td>
+        </tr>
+
+        </tbody>
+    </table>
+    <div>
+        <a href="create.html">
+            <button class="btn btn-primary">Create new student</button>
+        </a>
+    </div>
+</div>
+
+<script th:src="@{/webjars/jquery/3.1.1/jquery.min.js}"></script>
+</body>
+</html>
