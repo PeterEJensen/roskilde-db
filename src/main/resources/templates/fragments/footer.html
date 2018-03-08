@@ -11,7 +11,7 @@
         <!-- this is footer -->
             Roskilde Frie Børnehave
             <span sec:authorize="isAuthenticated()">
-                | Logged user: <span sec:authentication="name"></span> |
+                | Nuværende bruger: <span sec:authentication="name"></span> |
                 Roles: <span sec:authentication="principal.authorities"></span> |
                 <a th:href="@{/logout}">Log ud</a>
             </span>
