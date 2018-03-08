@@ -1,7 +1,7 @@
-package com.mkyong.controller;
+package com.peterpc.controller;
 
-import com.mkyong.config.Student;
-import com.mkyong.config.UserServiceImpl;
+import com.peterpc.config.Student;
+import com.peterpc.config.UserServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

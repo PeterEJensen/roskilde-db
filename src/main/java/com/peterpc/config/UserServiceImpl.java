@@ -1,4 +1,4 @@
-package com.mkyong.config;
+package com.peterpc.config;
 
 
 import org.springframework.stereotype.Service;

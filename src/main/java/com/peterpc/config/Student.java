@@ -1,9 +1,11 @@
-package com.mkyong.config;
+package com.peterpc.config;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
+
+//Skal omskrives til DB, placeholder prototype class
 public class Student {
 
     private int studentId;
